@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=csi_localhost
+POSTGRES_USER=ZbRLBNieipgrreYkkMNvkZfdKgKJWcsK
+POSTGRES_PASSWORD=0Gbhg48IiXvEE4jSkfDIhVUar27IOO8H588ICYm49206ZLvsOada9lskY1c665VY

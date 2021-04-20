@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Question</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}"/>
+  <noscript>
+    <link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"/>
+  </noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+  <!-- Header -->
+  <header id="header">
+    <a href="{% url 'home' %}" class="logo">LOCAL HOST</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li class="active"><a href="#">Arena</a></li>
+      <li><a href="{% url 'user_profile:lead' %}">Leader board</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+
+    <!-- Post -->
+    <section class="post">
+      <header class="major">
+
+        <h1>{{ question.question }}</h1>
+
+      </header>
+      <div class="image main"><img src="{{ question.image.url }}" alt=""/></div>
+      <!-- IF it's a question -->
+      <form class="form-wrap frm" action="" method="POST">
+        {% csrf_token %}
+        {{ form }}   
+        <button type="submit" class="button large additional">Submit</button>
+      </form>
+    </section>
+
+
+  </div>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'assets/js/browser.min.js' %}"></script>
+<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+<script src="{% static 'assets/js/util.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>
