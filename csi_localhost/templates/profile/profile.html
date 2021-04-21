@@ -2,11 +2,15 @@
 {%load static%}
 
 {%block content%}
+
 			<form method="post" style="z-index: 500;" class="profile_form">
             {% csrf_token %}
 			{{ form }}
 			<div style="text-align:center; margin:20px">
 				<button type="submit prof_btn">Submit</button>
 		</div>
-          </form>
+		  </form>
+<script>
+	document.getElementById("wrapper").style.height=100vh;
+</script>
 {%endblock content%}
