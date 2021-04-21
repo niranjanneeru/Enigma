@@ -4866,7 +4866,7 @@ label {
   color: rgb(112, 110, 110);
 }
 .signout {
-  position: absolute;
+  position: fixed;
 
   z-index: 100;
   left: 10px;
