@@ -14,7 +14,8 @@
 	<body class="is-preload" >
 		{%if request.user.is_authenticated%}
 		<div class="signout" >
-			<img class="pic" onclick="show_side_bar(this)" src={{ request.user.socialaccount_set.all.0.get_avatar_url }}>
+			<img onerror="this.onerror=null;this.src='{% static 'images/favicons/icon.jpg' %}';" onclick="show_side_bar(this)" src={{ request.user.socialaccount_set.all.0.get_avatar_url }}>
+
 			
 		</div>
 		<div id="sidebar" class="sidebar">
