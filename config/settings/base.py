@@ -158,7 +158,7 @@ MEDIA_ROOT = str(APPS_DIR / "media")
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = "/media/"
 
-DEFAULT_FILE_STORAGE = 'custom_storages.custom_azure_storage.PublicAzureStorage'
+DEFAULT_FILE_STORAGE = 'custom_storage.custom_azure_storage.PublicAzureStorage'
 # STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
 AZURE_ACCOUNT_NAME = "csilocalhost"
