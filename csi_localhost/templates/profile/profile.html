@@ -1,21 +1,7 @@
+{%extends 'base.html'%}
 {%load static%}
 
-
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Treasure Hunt</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
-		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-		<div id="wrapper" style="height:100vh;" class="fade-in">
-		
-
+{%block content%}
 			<form method="post" style="z-index: 500;" class="profile_form">
             {% csrf_token %}
 			{{ form }}
@@ -23,18 +9,4 @@
 				<button type="submit prof_btn">Submit</button>
 		</div>
           </form>
-		
-			</div>
-			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
-			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
-			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
-			<script src="{% static 'assets/js/browser.min.js' %}"></script>
-			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
-			<script src="{% static 'assets/js/util.js' %}"></script>
-			<script src="{% static 'assets/js/main.js' %}"></script>
-			<script>
-				document.getElementById('navPanelToggle').innerHTML= "";
-			</script>
-
-	</body>
-</html>
+{%endblock content%}
