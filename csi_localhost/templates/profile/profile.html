@@ -14,27 +14,16 @@
 
 		<!-- Wrapper -->
 		<div id="wrapper" style="height:100vh;" class="fade-in">
-			<ul class="circles">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-		</ul>
+		
 
-			<form method="post" class="profile_form">
+			<form method="post" style="z-index: 500;" class="profile_form">
             {% csrf_token %}
 			{{ form }}
 			<div style="text-align:center; margin:20px">
 				<button type="submit">Submit</button>
 		</div>
           </form>
-
+		
 			</div>
 			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
 			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
