@@ -70,6 +70,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     'allauth.socialaccount.providers.google',
     'nested_admin',
+    'csvexport',
 ]
 
 LOCAL_APPS = [

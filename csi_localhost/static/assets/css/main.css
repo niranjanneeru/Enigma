@@ -4844,6 +4844,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
   color: white;
 }
+.prof_btn {
+  transition: all 0.5s;
+}
+.prof_btn:hover {
+  border: 3px solid red;
+}
 .profile_form input {
   font-weight: bold;
   background-color: white;
