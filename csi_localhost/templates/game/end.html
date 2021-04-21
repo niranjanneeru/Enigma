@@ -1,43 +1,6 @@
+{%extends 'base.html'%}
 {%load static%}
-<!DOCTYPE HTML>
-
-<html>
-<head>
-  <title>Treasure Hunt</title>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <link rel="stylesheet" href="{% static 'assets/css/main.css' %}"/>
-  <noscript>
-    <link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"/>
-  </noscript>
-</head>
-<body class="is-preload">
-
-  {%if request.user.is_authenticated%}
-  <div class="signout" >
-    <img onerror="this.onerror=null;this.src='{% static 'images/favicons/icon.jpg' %}';" onclick="show_side_bar(this)" src={{ request.user.socialaccount_set.all.0.get_avatar_url }}>
-    
-  </div>
-  <div id="sidebar" class="sidebar">
-    <a>{{request.user.profile.nick_name | title}}</a>
-    <a href="{%url 'user_profile:redirect'%}">Rules</a>
-    <a class="logout_button" href="{% url 'user_profile:logout'%}">Logout</a>
-    
-  </div>
-  {%endif%}
-<div id="wrapper" class="fade-in" onclick="show_side_bar(this)">
-  <ul class="circles">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ul>
+{%block content%}
 
   <!-- Intro -->
   <div id="intro">
@@ -49,15 +12,5 @@
     <p>{{message}}</p>
     <a href="{%url 'user_profile:lead'%}" class="button icon solid  fas fa-play scrolly">LeaderBoard</a>
   </div>
+{%endblock content%}
 
-  <!-- Scripts -->
-  <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-  <script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
-  <script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
-  <script src="{% static 'assets/js/browser.min.js' %}"></script>
-  <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
-  <script src="{% static 'assets/js/util.js' %}"></script>
-  <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-</html>
