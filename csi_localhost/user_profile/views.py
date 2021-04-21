@@ -1,5 +1,8 @@
+import datetime
+
 from django.contrib.auth import logout as log_me_out
 from django.shortcuts import render, redirect
+
 from csi_localhost.rules.models import Rules
 from .forms import ProfileForm
 from .models import Profile
@@ -15,12 +18,13 @@ def profile_view(request):
             if form.is_valid():
                 form = form.save(commit=False)
                 form.user = request.user
+                form.last_submission = datetime.datetime.now()
                 form.save()
-                return render(request, 'profile/start.html',{'rules':rules})
+                return render(request, 'profile/start.html', {'rules': rules})
         elif request.method == "GET":
             try:
                 profile = user.profile
-                return render(request, 'profile/start.html',{'rules':rules})
+                return render(request, 'profile/start.html', {'rules': rules})
             except Profile.DoesNotExist:
                 form = ProfileForm(initial={'nick_name': user.username})
                 return render(request, 'profile/profile.html', {'form': form})
