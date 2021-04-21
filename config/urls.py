@@ -13,7 +13,7 @@ urlpatterns = [
                   # Django Admin, use {% url 'admin:index' %}
                   path(r'nested_admin/', include('nested_admin.urls')),
 
-                  path(settings.ADMIN_URL, admin.site.urls),
+                  path('admin/', admin.site.urls),
                   # User management
                   # path("users/", include("csi_localhost.users.urls", namespace="users")),
                   path("accountsaccountsaccounts/", include("allauth.urls")),
