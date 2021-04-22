@@ -1,58 +1,60 @@
 import datetime
 
-from django.contrib.auth import logout as log_me_out
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect
+from django.views import View
 
 from csi_localhost.rules.models import Rules
 from .forms import ProfileForm
 from .models import Profile
 
 
-# Create your views here.
-def profile_view(request):
-    user = request.user
+class ProfileView(View):
     rules = Rules.objects.all().order_by('priority')
-    if user.is_authenticated:
-        if request.method == "POST":
-            form = ProfileForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.last_submission = datetime.datetime.now()
-                form.save()
-                return render(request, 'profile/start.html', {'rules': rules})
-        elif request.method == "GET":
-            try:
-                profile = user.profile
-                return render(request, 'profile/start.html', {'rules': rules})
-            except Profile.DoesNotExist:
-                form = ProfileForm(initial={'nick_name': user.username})
-                return render(request, 'profile/profile.html', {'form': form})
-    else:
-        return redirect('home')
 
-
-def leader_view(request):
-    context = {'profiles': Profile.objects.all().order_by('-marks')}
-    if request.user.is_authenticated:
+    def get(self, request):
+        user = request.user
         try:
-            profile = request.user.profile
-            if profile:
-                if profile.current_question:
-                    context['text'] = "Let's Continue"
-                    context['has_started'] = True
-                else:
-                    context['text'] = "Let's Start"
-                    context['has_started'] = False
+            profile = user.profile
+            return render(request, 'profile/start.html', {'rules': self.rules})
         except Profile.DoesNotExist:
-            context['text'] = "Let's Start"
-            context['has_started'] = False
-    else:
-        context['text'] = "Let's Start"
-        context['has_started'] = False
-    return render(request, 'profile/lead.html', context)
+            form = ProfileForm(initial={'nick_name': user.username})
+            return render(request, 'profile/profile.html', {'form': form})
+
+    def post(self, request):
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.last_submission = datetime.datetime.now()
+            form.save()
+            return render(request, 'profile/start.html', {'rules': self.rules})
 
 
-def logout(request):
-    log_me_out(request)
-    return redirect('home')
+class LeaderView(View):
+    context = {'profiles': Profile.objects.all().order_by('-marks')}
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            try:
+                profile = request.user.profile
+                if profile:
+                    if profile.current_question:
+                        self.context['text'] = "Let's Continue"
+                        self.context['has_started'] = True
+                    else:
+                        self.context['text'] = "Let's Start"
+                        self.context['has_started'] = False
+            except Profile.DoesNotExist:
+                self.context['text'] = "Let's Start"
+                self.context['has_started'] = False
+        else:
+            self.context['text'] = "Let's Start"
+            self.context['has_started'] = False
+        return render(request, 'profile/lead.html', self.context)
+
+
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        return redirect('home')

@@ -100,7 +100,7 @@ AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
 LOGIN_REDIRECT_URL = "user_profile:redirect"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-url
-LOGIN_URL = "account_login"
+LOGIN_URL = "google_login"
 
 # PASSWORDS
 # ------------------------------------------------------------------------------
@@ -164,7 +164,6 @@ DEFAULT_FILE_STORAGE = 'custom_storage.custom_azure.PublicAzureStorage'
 
 AZURE_ACCOUNT_NAME = "csilocalhost"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-
 
 # TEMPLATES
 # ------------------------------------------------------------------------------
