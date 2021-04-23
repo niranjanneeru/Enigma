@@ -20,7 +20,7 @@ class Question(models.Model):
         super(Question, self).save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.number) + f" {self.question}"
+        return self.question
 
 
 class Meme(models.Model):
