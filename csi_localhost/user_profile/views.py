@@ -1,5 +1,4 @@
-import datetime
-
+from django.utils.timezone import now
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
 from django.views import View
@@ -26,7 +25,7 @@ class ProfileView(View):
         if form.is_valid():
             form = form.save(commit=False)
             form.user = request.user
-            form.last_submission = datetime.datetime.now()
+            form.last_submission = now()
             form.save()
             return render(request, 'profile/start.html', {'rules': self.rules})
 

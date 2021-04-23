@@ -1,6 +1,5 @@
-import datetime
-
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.timezone import now
 from django.views import View
 
 from csi_localhost.response.models import Response
@@ -46,8 +45,8 @@ class QuestionView(View):
             if answer:
                 answer = answer.replace(' ', '')
             response = Response(user=profile, question=profile.current_question, answer=answer,
-                                create_date=datetime.datetime.now())
-            profile.last_submission = datetime.datetime.now()
+                                create_date=now())
+            profile.last_submission = now()
             if answer and answer.lower() == profile.current_question.answer.lower():
                 response.status = 1
                 response.save()

@@ -1,4 +1,4 @@
-import datetime
+from django.utils.timezone import now
 
 from django.db import models
 from django.utils.text import slugify
@@ -16,7 +16,7 @@ class Question(models.Model):
     is_active = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.question + str(datetime.datetime.now()))
+        self.slug = slugify(self.question + str(now()))
         super(Question, self).save(*args, **kwargs)
 
     def __str__(self):
