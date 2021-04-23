@@ -4881,7 +4881,7 @@ label {
   cursor: pointer;
 }
 .sidebar {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -4893,7 +4893,7 @@ label {
   transition: all 1s;
 }
 .sidebar2 {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 100;
