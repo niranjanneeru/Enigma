@@ -43,6 +43,8 @@ class QuestionView(View):
         form = AnswerForm(request.POST)
         if form.is_valid():
             answer = form.data.get('answer')
+            if answer:
+                answer = answer.replace(' ', '')
             response = Response(user=profile, question=profile.current_question, answer=answer,
                                 create_date=datetime.datetime.now())
             profile.last_submission = datetime.datetime.now()
