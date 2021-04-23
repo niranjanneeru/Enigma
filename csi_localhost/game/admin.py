@@ -2,9 +2,10 @@ from django.contrib import admin
 
 from .models import Question, Meme
 
+
 class QuestionAdmin(admin.ModelAdmin):
     search_fields = ['question', 'answer']
-    list_display = ['question', 'marks', 'answer']
+    list_display = ['number', 'question', 'marks', 'answer', 'is_active']
     list_filter = ['marks']
 
 
