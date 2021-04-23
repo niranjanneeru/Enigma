@@ -1,19 +1,17 @@
-{% extends "account/base.html" %}
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
 
-{% load i18n %}
+					<div id="intro">
+						<h1>YOU NEED A GOOGLE ACCOUNT!!</h1>
+							
+                    <!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li ><a href="{%url 'home' %}">Home</a></li>
+							<li><a href="{%url 'user_profile:lead' %}">Leader board</a></li>
+							</ul>
+					</nav>
+			</div>
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
-
-{% block inner %}
-<h1>{% trans "Sign Out" %}</h1>
-
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button class="btn btn-danger" type="submit">{% trans 'Sign Out' %}</button>
-</form>
-{% endblock %}
+{%endblock content%}

@@ -1,11 +1,17 @@
-{% extends "account/base.html" %}
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
 
-{% load i18n %}
+					<div id="intro">
+						<h1>YOU NEED A GOOGLE ACCOUNT!!</h1>
+							
+                    <!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li ><a href="{%url 'home' %}">Home</a></li>
+							<li><a href="{%url 'user_profile:lead' %}">Leader board</a></li>
+							</ul>
+					</nav>
+			</div>
 
-{% block head_title %}{% trans "Account Inactive" %}{% endblock %}
-
-{% block inner %}
-<h1>{% trans "Account Inactive" %}</h1>
-
-<p>{% trans "This account is inactive." %}</p>
-{% endblock %}
+{%endblock content%}

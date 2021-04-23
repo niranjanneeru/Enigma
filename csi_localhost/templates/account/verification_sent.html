@@ -1,12 +1,17 @@
-{% extends "account/base.html" %}
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
 
-{% load i18n %}
+					<div id="intro">
+						<h1>YOU NEED A GOOGLE ACCOUNT!!</h1>
+							
+                    <!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li ><a href="{%url 'home' %}">Home</a></li>
+							<li><a href="{%url 'user_profile:lead' %}">Leader board</a></li>
+							</ul>
+					</nav>
+			</div>
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
-
-{% block inner %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
-
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
-
-{% endblock %}
+{%endblock content%}
