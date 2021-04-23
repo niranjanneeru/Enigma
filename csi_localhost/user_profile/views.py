@@ -31,27 +31,25 @@ class ProfileView(View):
             return render(request, 'profile/start.html', {'rules': self.rules})
 
 
-class LeaderView(View):
+def leader_view(request):
     context = {'profiles': Profile.objects.all().order_by('-marks')}
-
-    def get(self, request):
-        if request.user.is_authenticated:
-            try:
-                profile = request.user.profile
-                if profile:
-                    if profile.current_question:
-                        self.context['text'] = "Let's Continue"
-                        self.context['has_started'] = True
-                    else:
-                        self.context['text'] = "Let's Start"
-                        self.context['has_started'] = False
-            except Profile.DoesNotExist:
-                self.context['text'] = "Let's Start"
-                self.context['has_started'] = False
-        else:
-            self.context['text'] = "Let's Start"
-            self.context['has_started'] = False
-        return render(request, 'profile/lead.html', self.context)
+    if request.user.is_authenticated:
+        try:
+            profile = request.user.profile
+            if profile:
+                if profile.current_question:
+                    context['text'] = "Let's Continue"
+                    context['has_started'] = True
+                else:
+                    context['text'] = "Let's Start"
+                    context['has_started'] = False
+        except Profile.DoesNotExist:
+            context['text'] = "Let's Start"
+            context['has_started'] = False
+    else:
+        context['text'] = "Let's Start"
+        context['has_started'] = False
+    return render(request, 'profile/lead.html', context)
 
 
 class LogoutView(View):
