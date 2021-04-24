@@ -6,6 +6,9 @@
 					<div id="intro">
                         <h1 style="color: {{result.color}};">{{result.message}}</h1>
                         {%if result.indicator%}
+                        <script>
+                                document.getElementById("wrapper").style.background="";
+                        </script>
                         <p>Congratulations you can move on to the next question</p>
                         <a href="{%url 'game:quiz'%}" class="button icon solid  fas fa-play scrolly">next</a>
                     
