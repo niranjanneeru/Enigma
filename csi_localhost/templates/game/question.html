@@ -27,7 +27,10 @@
         <h1>{{ question.question }}</h1>
 
       </header>
-      <div class="image main"><img src="{{ question.image.url }}" alt=""/></div>
+      <div class="image main">
+        <div style="height:100%;position: absolute;"></div>
+        <img src="{{ question.image.url }}" alt=""/>
+      </div>
       <!-- IF it's a question -->
       <form class="form-wrap frm" action="" method="POST">
         {% csrf_token %}
