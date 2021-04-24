@@ -2,12 +2,13 @@
 {%load static%}
 
 {%block content%}
-
 			<form method="post" style="z-index: 500;" class="profile_form">
+			<p>Make your nickname as anonymous as possible. Username will be used for certification purposes</p>
+
             {% csrf_token %}
 			{{ form }}
 			<div style="text-align:center; margin:20px">
-				<p>Make your nickname as anonymous as possible. Username will be used for certification purposes</p>
+				
 				<button type="submit button prof_btn">Submit</button>
 		</div>
 		  </form>
