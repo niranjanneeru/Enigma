@@ -3,7 +3,7 @@
 
 {%block content%}
 			<form method="post" style="z-index: 500;" class="profile_form">
-			<p>Make your nickname as anonymous as possible. Username will be used for certification purposes</p>
+			<p style="padding:10px;background: rgba( 255, 255, 255, 0.25 );rgba( 31, 38, 135, 0.37 );backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );border-radius: 10px;">Make your nickname as anonymous as possible. Username will be used for certification purposes</p>
 
             {% csrf_token %}
 			{{ form }}
@@ -12,6 +12,14 @@
 				<button type="submit button prof_btn">Submit</button>
 		</div>
 		  </form>
+		  <div style="height: 10vh;"></div>
+		  <nav id="nav">
+			<ul class="links">
+			  <li><a href="{% url 'home' %}">Home</a></li>
+			  <li><a href="{% url 'user_profile:lead' %}">Leader board</a></li>
+			</ul>
+		
+		  </nav>
 <script>
 	document.getElementById("wrapper").style.height='100vh';
 	document.getElementById("circles").style.display="none";
