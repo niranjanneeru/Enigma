@@ -3,8 +3,8 @@
 {%block content%}
 
 					<div id="intro">
-						<h1>Before you go!</h1>
-						<p>	{%for rule in rules%}{{rule.rule | safe}}{%endfor%}</p>
+						<h1>Rules: </h1>
+						<p style="text-align: left;">	{%for rule in rules%}{{rule.rule | safe}}{%endfor%}</p>
 							<a href="{%url 'game:quiz'%}" class="button icon solid  fas fa-play scrolly">Continue</a>  
                     </div>
                     <!-- Nav -->
