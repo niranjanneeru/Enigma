@@ -1,6 +1,6 @@
-from django.utils.timezone import now
 from django.contrib.auth import logout
 from django.shortcuts import render, redirect
+from django.utils.timezone import now
 from django.views import View
 
 from csi_localhost.rules.models import Rules
@@ -9,13 +9,11 @@ from .models import Profile
 
 
 class ProfileView(View):
-    rules = Rules.objects.all().order_by('priority')
-
     def get(self, request):
         user = request.user
         try:
             profile = user.profile
-            return render(request, 'profile/start.html', {'rules': self.rules})
+            return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
         except Profile.DoesNotExist:
             form = ProfileForm(initial={'nick_name': user.username})
             return render(request, 'profile/profile.html', {'form': form})
@@ -27,7 +25,7 @@ class ProfileView(View):
             form.user = request.user
             form.last_submission = now()
             form.save()
-            return render(request, 'profile/start.html', {'rules': self.rules})
+            return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
 
 
 def leader_view(request):
