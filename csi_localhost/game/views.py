@@ -46,8 +46,8 @@ class QuestionView(View):
                 answer = answer.replace(' ', '')
             response = Response(user=profile, question=profile.current_question, answer=answer,
                                 create_date=now())
-            profile.last_submission = now()
             if answer and answer.lower() == profile.current_question.answer.lower():
+                profile.last_submission = now()
                 response.status = 1
                 response.save()
                 message = Meme.objects.filter(category=1).order_by('?').first()
