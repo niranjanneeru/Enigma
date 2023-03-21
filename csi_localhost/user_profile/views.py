@@ -29,7 +29,9 @@ class ProfileView(View):
 
 
 def leader_view(request):
-    context = {'profiles': Profile.objects.order_by('-marks', 'last_submission')}
+    profiles = Profile.objects.filter(marks__gt=0)
+    context = {'profiles': profiles.order_by('-marks', 'last_submission')}
+
     if request.user.is_authenticated:
         try:
             profile = request.user.profile

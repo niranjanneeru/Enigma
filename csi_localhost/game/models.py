@@ -11,7 +11,7 @@ class Question(models.Model):
     number = models.PositiveSmallIntegerField(unique=True)
     slug = models.SlugField(editable=False, unique=True)
     marks = models.IntegerField()
-    image = models.ImageField(upload_to=upload_to)
+    image = models.URLField(max_length=1000)
     answer = models.CharField(max_length=100)
     is_active = models.BooleanField(default=False)
 

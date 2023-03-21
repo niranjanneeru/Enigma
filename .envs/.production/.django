@@ -4,7 +4,7 @@
 DJANGO_SETTINGS_MODULE=config.settings.production
 DJANGO_SECRET_KEY=qK9HrNcNFmyOrx3pKyEnq3MoU8pkY2rRaflWDr5HEjcZhLxdP6XcMVljpxogzLEx
 DJANGO_ADMIN_URL=7O3xI8zcMXG2YW3DvHAu8CLDAADudZ9L/
-DJANGO_ALLOWED_HOSTS=.enigma.csitkmce.tech
+DJANGO_ALLOWED_HOSTS=.enigma.iedctkmce.com
 
 # Security
 # ------------------------------------------------------------------------------

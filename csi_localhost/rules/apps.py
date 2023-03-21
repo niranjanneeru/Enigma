@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class RulesConfig(AppConfig):
-    name = 'rules'
+    name = 'csi_localhost.rules'

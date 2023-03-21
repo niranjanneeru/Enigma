@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 
-from ..game.models import Question
+from csi_localhost.game.models import Question
 
 
 class Profile(models.Model):
