@@ -1,6 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
@@ -281,7 +281,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Orbitron", sans-serif !important;
+  font-family: 'MedievalSharp', cursive;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -3443,7 +3443,7 @@ body.is-preload #wrapper.fade-in:before {
   color: #ffffff;
 }
 #intro h1 {
-  font-family: "Orbitron", sans-serif !important;
+  font-family: 'MedievalSharp', cursive;
 }
 #intro h1,
 #intro h2,
