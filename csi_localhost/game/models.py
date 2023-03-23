@@ -9,7 +9,7 @@ class Question(models.Model):
     upload_to = 'question/'
     question = models.CharField(max_length=500)
     number = models.PositiveSmallIntegerField(unique=True)
-    slug = models.SlugField(editable=False, unique=True)
+    slug = models.SlugField(editable=False, unique=True, max_length=700)
     marks = models.IntegerField()
     image = models.URLField(max_length=1000)
     answer = models.CharField(max_length=100)

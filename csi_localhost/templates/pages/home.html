@@ -1,63 +1,60 @@
-{%extends 'base.html'%}
-{%load static%}
+{% extends 'base.html' %}
+{% load static %}
 {% load socialaccount %}
-{%block content%}
+{% block content %}
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1 class="" data-text="Enigma">Enigma</h1>
-						<p>A tempting treasure awaits those who dare to seek it.</p>
+  <!-- Intro -->
+  <div id="intro">
+    <h1 class="" data-text="Enigma">Enigma</h1>
+    <p>A tempting treasure awaits those who dare to seek it.</p>
 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <ul class="actions">
+      <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+  </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a  class="logo">ASCENDO</a>
-					</header>
+  <!-- Header -->
+  <header id="header">
+    <a class="logo">ASCENDO</a>
+  </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="{%url 'home' %}">Home</a></li>
-							{%if request.user.is_authenticated%}
-							<li><a href="{%url 'user_profile:redirect' %}" >Let's start</a></li>
-							{%else%}
-							<li><a href="{% provider_login_url 'google' %}" >Let's start</a></li>
-							{%endif%}
-							<li><a href="{%url 'user_profile:lead' %}">Leader board</a></li>
-							</ul>
-					</nav>
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li class="active"><a href="{% url 'home' %}">Home</a></li>
+      {% if request.user.is_authenticated %}
+        <li><a href="{% url 'user_profile:redirect' %}">Let's start</a></li>
+      {% else %}
+        <li><a href="{% provider_login_url 'google' %}">Let's start</a></li>
+      {% endif %}
+      <li><a href="{% url 'user_profile:lead' %}">Leader board</a></li>
+    </ul>
+  </nav>
 
-				<!-- Main -->
-					<div id="main">
+  <!-- Main -->
+  <div id="main">
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2>Before you go! </h2>
-									<p>"I shall be telling this with a sigh<br>
+    <!-- Featured Post -->
+    <article class="post featured">
+      <header class="major">
+        <h2>Before you go! </h2>
+        <p>"Gondor! Gondor, between the Mountains and the Sea! <br>
+          West Wind blew there; the light upon the Silver Tree<br>
+          Fell like bright rain in gardens of the Kings of old.<br>
+          O proud walls! White towers! O winged crown and throne of gold!<br>
+          O Gondor, Gondor! Shall Men behold the Silver Tree,<br>
+          Or West Wind blow again between the Mountains and the Sea?"<br></p>
+      </header>
 
-										Somewhere ages and ages hence:<br>
-										
-										Two roads diverged in a wood, and I—<br>
-										
-										I took the one less traveled by,<br>
-										
-										And that has made all the difference." <br></p>
-								</header>
-							
-								{%if not request.user.is_authenticated%}
-								<ul class="actions special">
-									<li><a href="{% provider_login_url 'google' %}" class="button large">Login</a></li>
-								</ul>
-								{%else%}
-								<ul class="actions special">
-									<li><a href="{% url 'user_profile:redirect' %}" class="button large">Continue</a></li>
-								</ul>
-								{%endif%}
-							</article>
-			</div>
-{%endblock content%}
+      {% if not request.user.is_authenticated %}
+        <ul class="actions special">
+          <li><a href="{% provider_login_url 'google' %}" class="button large">Login</a></li>
+        </ul>
+      {% else %}
+        <ul class="actions special">
+          <li><a href="{% url 'user_profile:redirect' %}" class="button large">Continue</a></li>
+        </ul>
+      {% endif %}
+    </article>
+  </div>
+{% endblock content %}
