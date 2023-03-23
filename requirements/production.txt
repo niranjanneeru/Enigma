@@ -9,3 +9,4 @@ django-admin-csvexport
 # Django
 # ------------------------------------------------------------------------------
 django-anymail==8.2  # https://github.com/anymail/django-anymail
+sentry-sdk
