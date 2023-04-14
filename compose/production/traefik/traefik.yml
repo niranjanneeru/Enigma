@@ -28,7 +28,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: "Host(`t-hunt.iedctkmce.com`)"
+      rule: "Host(`incognito.hestiatkmce.live`)"
       entryPoints:
         - web-secure
       middlewares:
