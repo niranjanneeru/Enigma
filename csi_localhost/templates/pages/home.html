@@ -5,18 +5,14 @@
 
   <!-- Intro -->
   <div id="intro">
-    <h1 class="" data-text="Enigma">Enigma</h1>
-    <p>A tempting treasure awaits those who dare to seek it.</p>
+    <img src="../../static/images/incognito.svg"/>
+    <p class="txt">Let the hunt begin</p>
 
-    <ul class="actions">
-      <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-    </ul>
+  
   </div>
 
   <!-- Header -->
-  <header id="header">
-    <a class="logo">ASCENDO</a>
-  </header>
+
 
   <!-- Nav -->
   <nav id="nav">
@@ -35,20 +31,16 @@
   <div id="main">
 
     <!-- Featured Post -->
-    <article class="post featured">
+    <article style="background-color: #111111 !important;color:#1FA09B;border: 2px solid #1FA09B;" class="post featured">
       <header class="major">
-        <h2>Before you go! </h2>
-        <p>"Gondor! Gondor, between the Mountains and the Sea! <br>
-          West Wind blew there; the light upon the Silver Tree<br>
-          Fell like bright rain in gardens of the Kings of old.<br>
-          O proud walls! White towers! O winged crown and throne of gold!<br>
-          O Gondor, Gondor! Shall Men behold the Silver Tree,<br>
-          Or West Wind blow again between the Mountains and the Sea?"<br></p>
+        <p>Welcome to INCOGNITO, the ultimate online treasure hunt! Are you ready to embark on a dark adventure full of puzzles, codes, and secrets?  Get ready to experience the thrill of the chase as you navigate through a complex web of challenges designed to test your skills and push you to your limits. So put on your thinking cap and get ready to dive into the dark side of the internet.
+          Are you ready to accept the challenge?</p>
       </header>
 
       {% if not request.user.is_authenticated %}
         <ul class="actions special">
-          <li><a href="{% provider_login_url 'google' %}" class="button large">Login</a></li>
+          <li><a href="{% provider_login_url 'google' %}" style="background: #111111;
+            border: 2px solid #1FA09B;padding:10px;font-size: 30px;color: #1FA09B;padding: 10px 40px;">Login</a></li>
         </ul>
       {% else %}
         <ul class="actions special">
