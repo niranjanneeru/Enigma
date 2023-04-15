@@ -3524,7 +3524,19 @@ body.is-preload #wrapper.fade-in:before {
   margin-top: -20rem;
 }
 
+@media screen and (max-width: 768px) {
+  #image-incognito {
+    max-width: 80%;
 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #image-incognito {
+    max-width: 60%;
+
+  }
+}
 
 
 body.is-preload #intro {
@@ -3867,6 +3879,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
+  padding : 4rem 2rem;
 }
 
 #main > * {
@@ -4788,7 +4801,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 .leader-r {
   display: flex;
-
   margin: 10px auto auto auto;
   justify-content: space-between;
   border: 1px solid black;
@@ -5115,4 +5127,8 @@ body {
   line-height: 59px;
 
   color: #1fa09b;
+}
+.profile-name
+{
+  color: #1fa09f;
 }
