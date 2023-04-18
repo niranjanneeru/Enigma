@@ -1,11 +1,19 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+@font-face {
+  font-family: 'Agency FB Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Agency FB Bold'), url('../../fonts/agency-fb-cufonfonts-webfont/AGENCYB.woff') format('woff');
+  }
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
 
 html,
 body,
@@ -237,7 +245,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 300;
   font-size: 1rem;
   line-height: 2.375;
@@ -281,7 +289,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Orbitron", sans-serif !important;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -2183,7 +2191,7 @@ button,
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -2194,6 +2202,7 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  color: white !important;
 }
 
 input[type="submit"].icon:before,
@@ -2415,7 +2424,7 @@ form > .fields > .field.quarter {
 
 label {
   display: block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -2507,7 +2516,7 @@ input[type="radio"] + label {
   display: inline-block;
   font-size: 1rem;
   letter-spacing: 0;
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   text-transform: none;
   font-weight: 300;
   padding-left: 2.8rem;
@@ -2525,7 +2534,7 @@ input[type="radio"] + label:before {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -2666,7 +2675,7 @@ input[type="radio"]:focus + label:before {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 400;
 }
 
@@ -3125,7 +3134,7 @@ table td {
 }
 
 table th {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -3231,7 +3240,7 @@ table.alt tbody tr td {
     box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   border: solid 2px;
   display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   height: 3rem;
@@ -3442,8 +3451,9 @@ body.is-preload #wrapper.fade-in:before {
 #intro b {
   color: #ffffff;
 }
+
 #intro h1 {
-  font-family: "Orbitron", sans-serif !important;
+  font-family: "Agency FB Bold", sans-serif !important;
 }
 #intro h1,
 #intro h2,
@@ -3694,7 +3704,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-style: solid;
   border-color: #ffffff;
   border-width: 5px !important;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 2.25rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -3823,7 +3833,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
   letter-spacing: 0.075em;
   list-style: none;
@@ -4513,7 +4523,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   position: relative;
   color: rgba(255, 255, 255, 0.25);
   cursor: default;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -4631,7 +4641,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   right: 0.75rem;
   border: 0;
   color: #ffffff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -4649,7 +4659,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -4722,7 +4732,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #fff !important;
   border-bottom: 0;
   display: block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.9rem;
   font-size: 0.9rem;
   font-weight: 900;
@@ -4766,7 +4776,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -4858,7 +4868,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: black;
   margin-bottom: 10px;
   border-radius: 3px;
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
 }
 .profile_form button {
   color: white !important;
@@ -4899,7 +4909,7 @@ label {
   display: flex;
   flex-direction: column;
   z-index: 100;
-  background-color: white;
+  background-color: #000;
   left: 10px;
   top: 80px;
   padding: 15px;
@@ -4931,7 +4941,7 @@ label {
   margin: 0 auto;
   color: #fff;
   font-size: 80px;
-  font-family: "Exo", sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
