@@ -1,14 +1,11 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
-
-@font-face {
-  font-family: "Agency FB Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Agency FB Bold"),
-    url("../../fonts/agency-fb-cufonfonts-webfont/AGENCYB.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+/*
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
 
 html,
 body,
@@ -284,7 +281,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Agency FB Bold";
+  font-family: "Orbitron", sans-serif !important;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -3027,11 +3024,7 @@ header > .date {
 }
 
 header > p {
-
-font-style: normal;
-font-size: 35px;
-line-height: 47px;
-text-align: center;
+  font-style: italic;
 }
 
 header > h1 + p {
@@ -3066,7 +3059,7 @@ header.major > :last-child {
 
 header.major > p {
   margin-top: 0;
-  text-align: justify;
+  text-align: center;
 }
 
 header.major > .date {
@@ -3352,7 +3345,7 @@ table.alt tbody tr td {
   height: 100%;
   background-color: #212931;
   background-image: url("../../images/overlay.png"),
-    linear-gradient(0deg, rgba(0, 4, 6, 0), rgba(0, 0, 0, 0.5)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(31, 2, 28, 0.5)),
     url("../../images/bg.jpg");
 
   background-position: fixed;
@@ -3409,12 +3402,15 @@ body.is-preload #wrapper.fade-in:before {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
+  display: flex;
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
-
+  -moz-justify-content: -moz-flex-end;
+  -webkit-justify-content: -webkit-flex-end;
+  -ms-justify-content: -ms-flex-end;
+  justify-content: flex-end;
   -moz-transition: opacity 1s ease, -moz-transform 1s ease;
   -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3423,7 +3419,7 @@ body.is-preload #wrapper.fade-in:before {
   cursor: default;
   text-align: center;
   z-index: 1;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 #intro input,
@@ -3447,7 +3443,7 @@ body.is-preload #wrapper.fade-in:before {
   color: #ffffff;
 }
 #intro h1 {
-  font-family: "Agency FB Bold";
+  font-family: "Orbitron", sans-serif !important;
 }
 #intro h1,
 #intro h2,
@@ -3524,20 +3520,38 @@ body.is-preload #wrapper.fade-in:before {
   margin-top: -20rem;
 }
 
-@media screen and (max-width: 768px) {
-  #image-incognito {
-    max-width: 80%;
-
-  }
+#intro + #header .logo {
+  -moz-transform: translateY(2rem);
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+  opacity: 0;
+  visibility: hidden;
 }
 
-@media screen and (max-width: 480px) {
-  #image-incognito {
-    max-width: 60%;
-
-  }
+#intro.hidden {
+  pointer-events: none;
+  -moz-transform: translateY(2rem);
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+  -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease,
+    visibility 0.5s;
+  -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 
+#intro.hidden + #header .logo {
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
 
 body.is-preload #intro {
   -moz-transform: translateY(2rem);
@@ -3557,8 +3571,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 @media screen and (max-width: 980px) {
   #intro {
-    
-   
+    padding: 4rem 4rem 2rem 4rem;
+    min-height: 90vh;
   }
 
   #intro p br {
@@ -3716,7 +3730,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Nav */
 
 #nav {
-  color: #1FA09B !important;
+  color: #ffffff;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -3725,7 +3739,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
   -ms-transition: -ms-transform 1s ease, opacity 1s ease;
   transition: transform 1s ease, opacity 1s ease;
-  background: #111111;
+  background: rgba(255, 255, 255, 0.175);
   height: 4rem;
   line-height: 4rem;
   margin: -4rem auto 0 auto;
@@ -3735,7 +3749,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
-  border: 2px solid #1FA09B;
 }
 
 #nav ul.divided li {
@@ -3810,13 +3823,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
-
-
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 900;
   letter-spacing: 0.075em;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  
+  text-transform: uppercase;
 }
 
 #nav ul.links li {
@@ -3841,7 +3854,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #nav ul.links li.active {
-  background-color: #1FA09B;
+  background-color: #ffffff;
 }
 
 #nav ul.links li.active a {
@@ -3879,7 +3892,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
-  padding : 4rem 2rem;
 }
 
 #main > * {
@@ -4801,6 +4813,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 .leader-r {
   display: flex;
+
   margin: 10px auto auto auto;
   justify-content: space-between;
   border: 1px solid black;
@@ -5113,22 +5126,4 @@ label {
     opacity: 0;
     border-radius: 50%;
   }
-}
-
-body {
-  font-family: "Agency FB Bold";
-}
-
-.txt {
-  font-family: "Agency FB";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 59px;
-
-  color: #1fa09b;
-}
-.profile-name
-{
-  color: #1fa09f;
 }
