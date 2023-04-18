@@ -230,7 +230,7 @@ html {
 }
 
 body {
-  color: #212931;
+  color: #fff;
 }
 
 body,
@@ -395,11 +395,11 @@ hr.major {
 input,
 select,
 textarea {
-  color: #212931;
+  color: #fff;
 }
 
 a {
-  color: #212931;
+  color: #fff;
   border-bottom-color: rgba(33, 41, 49, 0.5);
 }
 
@@ -410,7 +410,7 @@ a:hover {
 
 strong,
 b {
-  color: #212931;
+  color: #fff;
 }
 
 h1,
@@ -419,7 +419,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #212931;
+  color: #fff;
 }
 
 blockquote {
@@ -2575,7 +2575,7 @@ input[type="radio"] + label:before {
 }
 
 label {
-  color: #212931;
+  color: #fff;
 }
 
 input[type="text"],
@@ -2600,7 +2600,7 @@ select {
 
 select option {
   background-color: #ffffff;
-  color: #212931;
+  color: #fff;
 }
 
 .select-wrapper:before {
@@ -2609,7 +2609,7 @@ select option {
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  color: #212931;
+  color: #fff;
 }
 
 input[type="checkbox"] + label:before,
@@ -3184,7 +3184,7 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table th {
-  color: #212931;
+  color: #fff;
 }
 
 table thead {
@@ -3886,7 +3886,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Main */
 
 #main {
-  background-color: #ffffff;
+  background-color: #111111;
+  color: white !important;
   position: relative;
   margin: 0 auto;
   width: calc(100% - 4rem);
@@ -4658,9 +4659,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanelToggle.alt {
-  background-color: rgba(255, 255, 255, 0.875);
+  background-color: rgba(0, 0, 0, 0.875);
   box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-  color: #212931;
+  color: #fff;
 }
 
 #navPanelToggle.alt:hover {
@@ -4693,9 +4694,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   display: none;
   -webkit-overflow-scrolling: touch;
-  background: #ffffff;
+  background: #000;
   box-shadow: none;
-  color: #212931;
+  color: #fff !important;
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
@@ -4718,6 +4719,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanel .links li a {
+  color: #fff !important;
   border-bottom: 0;
   display: block;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
