@@ -4,7 +4,7 @@ from django.utils.timezone import now
 from django.views import View
 
 from csi_localhost.rules.models import Rules
-from .forms import ProfileForm
+from .forms import ProfileForm, ProfileDetailForm
 from .models import Profile
 
 
@@ -27,19 +27,21 @@ class ProfileView(View):
             form.save()
             return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
 
+
 class ProfileChangeView(View):
     def get(self, request):
         user = request.user
-        form = ProfileForm(initial={'nick_name': user.username})
+        form = ProfileForm()
         return render(request, 'profile/profile.html', {'form': form})
 
     def post(self, request):
-        form = ProfileForm(request.POST)
+        form = ProfileDetailForm(request.POST)
         if form.is_valid():
-            form = form.save(commit=False)
-            form.user = request.user
-            form.last_submission = now()
-            form.save()
+            name = form.cleaned_data.get('name')
+            profile = request.user.profile
+            if name:
+                profile.name = name
+                profile.save()
             return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
 
 

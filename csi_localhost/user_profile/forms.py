@@ -7,3 +7,9 @@ class ProfileForm(ModelForm):
     class Meta:
         model = Profile
         fields = ['name', 'nick_name', 'contact', 'college']
+
+
+class ProfileDetailForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['name', ]
