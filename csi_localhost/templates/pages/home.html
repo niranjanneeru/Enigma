@@ -1,56 +1,57 @@
-{% extends 'base.html' %}
-{% load static %}
+{%extends 'base.html'%}
+{%load static%}
 {% load socialaccount %}
-{% block content %}
+{%block content%}
 
-  <!-- Intro -->
-  <div id="intro">
-    
-      <img id="image-incognito" src="../../static/images/incognito.svg"/>
+				<!-- Intro -->
+					<div id="intro">
+						<h1 class="glitch" data-text="INCOGNITO">INCOGNITO</h1>
+						<p>May the odds be ever in your favour.</p>
 
-    
-    
-    <p class="txt">Let the hunt begin</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
-  
-  </div>
+				<!-- Header -->
+					<header id="header">
+						<a  class="logo">HESTIA</a>
+					</header>
 
-  <!-- Header -->
- 
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="{%url 'home' %}">Home</a></li>
+							{%if request.user.is_authenticated%}
+							<li><a href="{%url 'user_profile:redirect' %}" >Let's start</a></li>
+							{%else%}
+							<li><a href="{% provider_login_url 'google' %}" >Let's start</a></li>
+							{%endif%}
+							<li><a href="{%url 'user_profile:lead' %}">Leader board</a></li>
+							</ul>
+					</nav>
 
-  <!-- Nav -->
-  <nav id="nav">
-    <ul class="links">
-      <li class="active"><a href="{% url 'home' %}">Home</a></li>
-      {% if request.user.is_authenticated %}
-        <li><a href="{% url 'user_profile:redirect' %}">Let's start</a></li>
-      {% else %}
-        <li><a href="{% provider_login_url 'google' %}">Let's start</a></li>
-      {% endif %}
-      <li><a href="{% url 'user_profile:lead' %}">Leader board</a></li>
-    </ul>
-  </nav>
+				<!-- Main -->
+					<div id="main">
 
-  <!-- Main -->
-  <div id="main">
-
-    <!-- Featured Post -->
-    <article style="background-color: #111111 !important;color:#1FA09B;border: 2px solid #1FA09B;" class="post featured">
-      <header class="major">
-        <p>Welcome to INCOGNITO, the ultimate online treasure hunt! Are you ready to embark on a dark adventure full of puzzles, codes, and secrets?  Get ready to experience the thrill of the chase as you navigate through a complex web of challenges designed to test your skills and push you to your limits. So put on your thinking cap and get ready to dive into the dark side of the internet.
-          Are you ready to accept the challenge?</p>
-      </header>
-
-      {% if not request.user.is_authenticated %}
-        <ul class="actions special">
-          <li><a href="{% provider_login_url 'google' %}" style="background: #111111;
-            border: 2px solid #1FA09B;padding:10px;font-size: 30px;color: #1FA09B;padding: 10px 40px;">Login</a></li>
-        </ul>
-      {% else %}
-        <ul class="actions special">
-          <li><a href="{% url 'user_profile:redirect' %}" class="button large">Continue</a></li>
-        </ul>
-      {% endif %}
-    </article>
-  </div>
-{% endblock content %}
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2>Before you go! </h2>
+									<p style="text-align: justify !important;">Welcome to <b>INCOGNITO,</b> the ultimate online treasure hunt! Are you ready to embark on a dark adventure full of puzzles, codes, and secrets?  Get ready to experience the thrill of the chase as you navigate through a complex web of challenges designed to test your skills and push you to your limits. So put on your thinking cap and get ready to dive into the dark side of the internet.
+<br/>
+                    <b style="text-align: justify !important;"  >Are you ready to accept the challenge?</b></p>
+								</header>
+							
+								{%if not request.user.is_authenticated%}
+								<ul class="actions special">
+									<li><a href="{% provider_login_url 'google' %}" class="button large">Login</a></li>
+								</ul>
+								{%else%}
+								<ul class="actions special">
+									<li><a href="{% url 'user_profile:redirect' %}" class="button large">Continue</a></li>
+								</ul>
+								{%endif%}
+							</article>
+			</div>
+{%endblock content%}

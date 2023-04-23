@@ -1,14 +1,19 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 
 @font-face {
-  font-family: "Agency FB Bold";
+  font-family: 'Agency FB Bold';
   font-style: normal;
   font-weight: normal;
-  src: local("Agency FB Bold"),
-    url("../../fonts/agency-fb-cufonfonts-webfont/AGENCYB.woff") format("woff");
-}
+  src: local('Agency FB Bold'), url('../../fonts/agency-fb-cufonfonts-webfont/AGENCYB.woff') format('woff');
+  }
+/*
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
 
 html,
 body,
@@ -233,14 +238,14 @@ html {
 }
 
 body {
-  color: #212931;
+  color: #fff;
 }
 
 body,
 input,
 select,
 textarea {
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 300;
   font-size: 1rem;
   line-height: 2.375;
@@ -284,7 +289,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Agency FB Bold";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -398,11 +403,11 @@ hr.major {
 input,
 select,
 textarea {
-  color: #212931;
+  color: #fff;
 }
 
 a {
-  color: #212931;
+  color: #fff;
   border-bottom-color: rgba(33, 41, 49, 0.5);
 }
 
@@ -413,7 +418,7 @@ a:hover {
 
 strong,
 b {
-  color: #212931;
+  color: #fff;
 }
 
 h1,
@@ -422,7 +427,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #212931;
+  color: #fff;
 }
 
 blockquote {
@@ -2186,7 +2191,7 @@ button,
   border-radius: 0;
   cursor: pointer;
   display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -2197,6 +2202,7 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  color: white !important;
 }
 
 input[type="submit"].icon:before,
@@ -2418,7 +2424,7 @@ form > .fields > .field.quarter {
 
 label {
   display: block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.075em;
@@ -2510,7 +2516,7 @@ input[type="radio"] + label {
   display: inline-block;
   font-size: 1rem;
   letter-spacing: 0;
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   text-transform: none;
   font-weight: 300;
   padding-left: 2.8rem;
@@ -2528,7 +2534,7 @@ input[type="radio"] + label:before {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -2578,7 +2584,7 @@ input[type="radio"] + label:before {
 }
 
 label {
-  color: #212931;
+  color: #fff;
 }
 
 input[type="text"],
@@ -2603,7 +2609,7 @@ select {
 
 select option {
   background-color: #ffffff;
-  color: #212931;
+  color: #fff;
 }
 
 .select-wrapper:before {
@@ -2612,7 +2618,7 @@ select option {
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-  color: #212931;
+  color: #fff;
 }
 
 input[type="checkbox"] + label:before,
@@ -2669,7 +2675,7 @@ input[type="radio"]:focus + label:before {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 400;
 }
 
@@ -3027,11 +3033,7 @@ header > .date {
 }
 
 header > p {
-
-font-style: normal;
-font-size: 35px;
-line-height: 47px;
-text-align: center;
+  font-style: italic;
 }
 
 header > h1 + p {
@@ -3066,7 +3068,7 @@ header.major > :last-child {
 
 header.major > p {
   margin-top: 0;
-  text-align: justify;
+  text-align: center;
 }
 
 header.major > .date {
@@ -3132,7 +3134,7 @@ table td {
 }
 
 table th {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -3191,7 +3193,7 @@ table tbody tr:nth-child(2n + 1) {
 }
 
 table th {
-  color: #212931;
+  color: #fff;
 }
 
 table thead {
@@ -3238,7 +3240,7 @@ table.alt tbody tr td {
     box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   border: solid 2px;
   display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   height: 3rem;
@@ -3352,7 +3354,7 @@ table.alt tbody tr td {
   height: 100%;
   background-color: #212931;
   background-image: url("../../images/overlay.png"),
-    linear-gradient(0deg, rgba(0, 4, 6, 0), rgba(0, 0, 0, 0.5)),
+    linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(31, 2, 28, 0.5)),
     url("../../images/bg.jpg");
 
   background-position: fixed;
@@ -3409,12 +3411,15 @@ body.is-preload #wrapper.fade-in:before {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
+  display: flex;
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
-
+  -moz-justify-content: -moz-flex-end;
+  -webkit-justify-content: -webkit-flex-end;
+  -ms-justify-content: -ms-flex-end;
+  justify-content: flex-end;
   -moz-transition: opacity 1s ease, -moz-transform 1s ease;
   -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
@@ -3423,7 +3428,7 @@ body.is-preload #wrapper.fade-in:before {
   cursor: default;
   text-align: center;
   z-index: 1;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 #intro input,
@@ -3446,8 +3451,9 @@ body.is-preload #wrapper.fade-in:before {
 #intro b {
   color: #ffffff;
 }
+
 #intro h1 {
-  font-family: "Agency FB Bold";
+  font-family: "Agency FB Bold", sans-serif !important;
 }
 #intro h1,
 #intro h2,
@@ -3524,20 +3530,38 @@ body.is-preload #wrapper.fade-in:before {
   margin-top: -20rem;
 }
 
-@media screen and (max-width: 768px) {
-  #image-incognito {
-    max-width: 80%;
-
-  }
+#intro + #header .logo {
+  -moz-transform: translateY(2rem);
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+  opacity: 0;
+  visibility: hidden;
 }
 
-@media screen and (max-width: 480px) {
-  #image-incognito {
-    max-width: 60%;
-
-  }
+#intro.hidden {
+  pointer-events: none;
+  -moz-transform: translateY(2rem);
+  -webkit-transform: translateY(2rem);
+  -ms-transform: translateY(2rem);
+  transform: translateY(2rem);
+  -moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease,
+    visibility 0.5s;
+  -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 
+#intro.hidden + #header .logo {
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
 
 body.is-preload #intro {
   -moz-transform: translateY(2rem);
@@ -3557,8 +3581,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 @media screen and (max-width: 980px) {
   #intro {
-    
-   
+    padding: 4rem 4rem 2rem 4rem;
+    min-height: 90vh;
   }
 
   #intro p br {
@@ -3680,7 +3704,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   border-style: solid;
   border-color: #ffffff;
   border-width: 5px !important;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 2.25rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -3716,7 +3740,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Nav */
 
 #nav {
-  color: #1FA09B !important;
+  color: #ffffff;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -3725,7 +3749,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
   -ms-transition: -ms-transform 1s ease, opacity 1s ease;
   transition: transform 1s ease, opacity 1s ease;
-  background: #111111;
+  background: rgba(255, 255, 255, 0.175);
   height: 4rem;
   line-height: 4rem;
   margin: -4rem auto 0 auto;
@@ -3735,7 +3759,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
-  border: 2px solid #1FA09B;
 }
 
 #nav ul.divided li {
@@ -3810,13 +3833,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
-
-
+  font-family: "Agency FB Bold", sans-serif !important;
+  font-weight: 900;
   letter-spacing: 0.075em;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  
+  text-transform: uppercase;
 }
 
 #nav ul.links li {
@@ -3841,7 +3864,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #nav ul.links li.active {
-  background-color: #1FA09B;
+  background-color: #ffffff;
 }
 
 #nav ul.links li.active a {
@@ -3873,13 +3896,13 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 /* Main */
 
 #main {
-  background-color: #ffffff;
+  background-color: #111111;
+  color: white !important;
   position: relative;
   margin: 0 auto;
   width: calc(100% - 4rem);
   max-width: 72rem;
   z-index: 2;
-  padding : 4rem 2rem;
 }
 
 #main > * {
@@ -4500,7 +4523,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   position: relative;
   color: rgba(255, 255, 255, 0.25);
   cursor: default;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.8rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -4618,7 +4641,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   right: 0.75rem;
   border: 0;
   color: #ffffff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.9rem;
   font-weight: 900;
   letter-spacing: 0.075em;
@@ -4636,7 +4659,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -4646,9 +4669,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanelToggle.alt {
-  background-color: rgba(255, 255, 255, 0.875);
+  background-color: rgba(0, 0, 0, 0.875);
   box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
-  color: #212931;
+  color: #fff;
 }
 
 #navPanelToggle.alt:hover {
@@ -4681,9 +4704,9 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
   display: none;
   -webkit-overflow-scrolling: touch;
-  background: #ffffff;
+  background: #000;
   box-shadow: none;
-  color: #212931;
+  color: #fff !important;
   height: 100%;
   max-width: 80%;
   overflow-y: auto;
@@ -4706,9 +4729,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #navPanel .links li a {
+  color: #fff !important;
   border-bottom: 0;
   display: block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-size: 0.9rem;
   font-size: 0.9rem;
   font-weight: 900;
@@ -4752,7 +4776,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 900;
 }
 
@@ -4801,6 +4825,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 .leader-r {
   display: flex;
+
   margin: 10px auto auto auto;
   justify-content: space-between;
   border: 1px solid black;
@@ -4843,7 +4868,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: black;
   margin-bottom: 10px;
   border-radius: 3px;
-  font-family: "Merriweather", Georgia, serif;
+  font-family: "Agency FB Bold", sans-serif !important;
 }
 .profile_form button {
   color: white !important;
@@ -4884,7 +4909,7 @@ label {
   display: flex;
   flex-direction: column;
   z-index: 100;
-  background-color: white;
+  background-color: #000;
   left: 10px;
   top: 80px;
   padding: 15px;
@@ -4916,7 +4941,7 @@ label {
   margin: 0 auto;
   color: #fff;
   font-size: 80px;
-  font-family: "Exo", sans-serif;
+  font-family: "Agency FB Bold", sans-serif !important;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -5113,22 +5138,4 @@ label {
     opacity: 0;
     border-radius: 50%;
   }
-}
-
-body {
-  font-family: "Agency FB Bold";
-}
-
-.txt {
-  font-family: "Agency FB";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 50px;
-  line-height: 59px;
-
-  color: #1fa09b;
-}
-.profile-name
-{
-  color: #1fa09f;
 }

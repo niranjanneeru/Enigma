@@ -57,9 +57,9 @@
 		@include vendor('transition', ('transform #{_duration(menu)} ease', 'box-shadow #{_duration(menu)} ease', 'visibility #{_duration(menu)}'));
 		display: none;
 		-webkit-overflow-scrolling: touch;
-		background: _palette(bg);
+		background: #000;
 		box-shadow: none;
-		color: _palette(fg-bold);
+		color: #fff;
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
