@@ -27,6 +27,21 @@ class ProfileView(View):
             form.save()
             return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
 
+class ProfileChangeView(View):
+    def get(self, request):
+        user = request.user
+        form = ProfileForm(initial={'nick_name': user.username})
+        return render(request, 'profile/profile.html', {'form': form})
+
+    def post(self, request):
+        form = ProfileForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.last_submission = now()
+            form.save()
+            return render(request, 'profile/start.html', {'rules': Rules.objects.all().order_by('priority')})
+
 
 def leader_view(request):
     profiles = Profile.objects.filter(marks__gt=0)
