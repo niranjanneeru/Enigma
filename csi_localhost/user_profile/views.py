@@ -31,7 +31,7 @@ class ProfileView(View):
 class ProfileChangeView(View):
     def get(self, request):
         user = request.user
-        form = ProfileForm()
+        form = ProfileDetailForm()
         return render(request, 'profile/profile.html', {'form': form})
 
     def post(self, request):
